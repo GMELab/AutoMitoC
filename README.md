@@ -129,4 +129,4 @@ Any queries pertaining to the AutoMitoC scripts can be addressed to:
 ## Citation 
 
 ### Preprint
- Chong M, Mohammadi-Shemirani P, Perrot N, Nelson W, Morton R, Narula S, Lali R, Khan I, Khan M, Judge C, Machipisa T, Cawte N, O'Donnell M, Pigeyre M, Akhabir L, Paré G. GWAS and ExWAS of blood Mitochondrial DNA copy number identifies 71 loci and highlights a potential causal role in dementia. _medRxiv_ (2021) doi:10.1101/2021.04.08.21255031.
+[Chong M, Mohammadi-Shemirani P, Perrot N, Nelson W, Morton R, Narula S, Lali R, Khan I, Khan M, Judge C, Machipisa T, Cawte N, O'Donnell M, Pigeyre M, Akhabir L, Paré G. GWAS and ExWAS of blood Mitochondrial DNA copy number identifies 71 loci and highlights a potential causal role in dementia. _medRxiv_ (2021) doi:10.1101/2021.04.08.21255031.](https://www.medrxiv.org/content/10.1101/2021.04.08.21255031v1)
