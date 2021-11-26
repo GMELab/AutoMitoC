@@ -136,6 +136,9 @@ Created with [BioRender.com](https://biorender.com/)
 We applied AutoMitoC to the UK Biobank and performed GWAS for buffy coat mtDNA-CN including up to 395,781 participants. Full genome-wide summary statistics (even the sub-bonferroni associations!) are available for download from the GWAS catalogue:
 
 [Trans-ethnic meta-analysis (GCST90026371)](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90026001-GCST90027000/GCST90026371/)
+
 [European (GCST90026372)](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90026001-GCST90027000/GCST90026372/)
+
 [South Asian (GCST90026373)](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90026001-GCST90027000/GCST90026373/)
+
 [African (GCST90026374)](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90026001-GCST90027000/GCST90026374/)
