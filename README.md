@@ -52,73 +52,66 @@ plink --bfile your_study \
 
 ## Necessary Input Files
 
-The core AutoMitoC Rscript assumes that all of the prior [pre-processing](#pre-processing) steps have been completed and requires the following inputs to be specified:
+The core AutoMitoC Rscript assumes all [pre-processing](#pre-processing) steps have been completed and requires the following inputs to be specified:
 
-1. Path to the **MT L2R matrix** (comma separated; rows as samples; columns as mitochondrial probe L2R; no header or sample IDs)
-2. Path to the **Autosomal L2R matrix** (comma separated; rows as samples; columns as autosomal probe L2R; no header or sample IDs)
-3. Path to the **Sample descriptor file** (comma separated; rows as samples; header line) containing the following columns:
+1. Path to the **Autosomal L2R matrix** ("EXAMPLE.AUTO_MATRIX.csv.gz"; comma separated; rows as samples; columns as autosomal probe L2R; no header or sample IDs)
+2. Path to the **MT L2R matrix** ("EXAMPLE.MITO_MATRIX.csv.gz" comma separated; rows as samples; columns as mitochondrial probe L2R; no header or sample IDs)
+3. Path to the **Sample descriptor file** ("EXAMPLE.SAMPLE_FILE.csv.gz"; comma separated; rows as samples; header line) containing the following columns:
 * Column 1: "SAMPLE" --> unique sample IDs **in the order that they appear in the MT and Autosomal L2R matrices**
 * Column 2: "SEX" --> self-reported gender (male=1;female=2) 
 * Column 3: "AGE" --> age in years 
-* Column 4 (Optional): "MITO_BENCHMARK" --> secondary mtDNA-CN measurement for comparison (e.g. qPCR, WGS, digital PCR)
-4. **Number of cores** to parallelize the PCA steps
-5. Output Path / **Output File Name Prefix**
+* Column 4 (Optional): "MITO_BENCHMARK" --> secondary mtDNA-CN measurement for comparison (e.g. qPCR, WGS, digital PCR). Missing values are perimssible and should be coded as 'NA'. 
+4. **Number of cores** to parallelize the PCA steps (10)
+5. Output Path / **Output File Name Prefix** ("TOY_EXAMPLE")
 
 For file formatting examples, please download the toy dataset in the subsequent "Quick Start" section. 
-
-Currently, the AutoMitoC pipeline starts at the second major step after pre-processing. Pre-processing can be done using previously developed tools.
-
-For Affymetrix data, L2R values can be derived by XXX
-
-Filtering for rare autosomal variants can be done as follows. 
-
-Filtering for common autosomal variants can be done as follows. 
 
 ## Quick Start
 
 1. Download the R package and decompress:
 ```sh
-unzip 
+wget https://github.com/GMELab/AutoMitoC/blob/master/AutoMitoC.V1.0a.tar.gz?raw=true
+tar -xvzf AutoMitoC.V1.0a.tar.gz
+cd AutoMitoC.V1.0a
 ```
 
 2. Install requisite R libraries:
 ```R
-
 R
-
 install.packages(c("data.table","ggplot2","parallel"))
+q()
+n
 ```
 3. Run the R script as follows:
 ```sh
-Rscript AUTOMITOC_V1_RSCRIPTS_CLEAN.r EXAMPLE.AUTO_MATRIX.csv.gz EXAMPLE.MITO_MATRIX.csv.gz EXAMPLE.SAMPLE_FILE2.csv.gz 10 EXAMPLE_TOY
+Rscript AUTOMITOC_V1_RSCRIPTS_CLEAN.r EXAMPLE.AUTO_MATRIX.csv.gz EXAMPLE.MITO_MATRIX.csv.gz EXAMPLE.SAMPLE_FILE.csv.gz 10 EXAMPLE_TOY
 ```
 4. If AutoMitoC is run successfully on the toy dataset, you should see something similar to the following output:
 
 ```R
-[1] "AutoMitoC Script v1.0 Initialized @ 2021-11-26 01:49:01"
+[1] "AutoMitoC Script v1.0 Initialized @ 2021-11-26 02:26:47"
 Loading required package: data.table
 Loading required package: ggplot2
 Loading required package: parallel
 [1] "Reading in Input Arguments..."
 [1] "Step 1. Preliminary PCA Correction of Autosomal Probe Intensities ... "
-[1] "The Top 126 Autosomal Principal Components Explain ~70% variance in Probe Intensities and will be corrected for "
+[1] "The Top 74 Autosomal Principal Components Explain ~70% variance in Probe Intensities and will be corrected for "
 null device
           1
 [1] "... Running Probe Correction with 10 core(s)"
 [1] "Step 2. Probe Cross-hybridization Check ... "
-[1] "Removing 950 Autosomal probes with potential cross-hybridization to the sex (R > 0.05) or mitochondrial (R > 0.05) genomes "
+[1] "Removing 127 Autosomal probes with potential cross-hybridization to the sex (R > 0.05) or mitochondrial (R > 0.05) genomes "
 [1] "Removing 3 Mitochondrial probes with potential cross-hybridization to the sex (R > 0.20) or autosomal (R > 0.05) genomes "
-[1] "*** Note that due to the robust epidemiological association between mtDNA-CN and sex, there is an expectation that mitochondrial probes will be associated with sex
-and therefore the correlation coefficient threshold for removing mitochondrial probes with evidence of cross-hybridization to sex chromosomes is more stringent"
+[1] "*** Note that due to the robust epidemiological association between mtDNA-CN and sex, there is an expectation that mitochondrial probes will be associated with sex and therefore the correlation coefficient threshold for removing mitochondrial probes with evidence of cross-hybridization to sex chromosomes is more stringent"
 [1] "Step 3. Final PCA of Clean Autosomal Probe Intensities ..."
-[1] "The Top 128 Autosomal Principal Components Explain ~70% variance in Probe Intensities and will be corrected for "
+[1] "The Top 72 Autosomal Principal Components Explain ~70% variance in Probe Intensities and will be corrected for "
 null device
           1
 [1] "... AutoMitoC mtDNA-CN estimates are finished!"
 [1] "... Benchmarking Complete!"
-[1] "AutoMitoC vs. user-supplied mtDNA-CN measurement performance: R = 0.673; Association P-value = 9.99e-183"
-[1] "AutoMitoC Script Finished @ 2021-11-26 01:51:47"
-[1] "Script Duration: 0 hrs, 2 mins, 45.76 secs ..."
+[1] "AutoMitoC vs. user-supplied mtDNA-CN measurement performance: R = 0.647; Association P-value = 1.67e-164"
+[1] "AutoMitoC Script Finished @ 2021-11-26 02:27:02"
+[1] "Script Duration: 0 hrs, 0 mins, 16 secs ..."
 
 ```
 ## Caveats and Areas of Future Development
@@ -130,8 +123,8 @@ AutoMitoC remains under active development and we plan to make improvements in t
 3. In the future, we will allow for greater flexibility to enable benchmarking of AutoMitoC estimates to other phenotypic correlates of mtDNA-CN (e.g. blood cell composition)
 
 ## Contact information
-Any queries pertaining to the AutoMitoC scripts can be addressed to either:
-**Michael Chong (michael.chong@phri.ca)** or **Guillaume Paré (pareg@mcmaster.ca)**
+Any queries pertaining to the AutoMitoC scripts can be addressed to:
+**Michael Chong (michael.chong@phri.ca)** and **Guillaume Paré (pareg@mcmaster.ca)**
 
 ## Citation 
 
