@@ -73,9 +73,8 @@ For file formatting examples, please download the toy dataset in the subsequent 
 
 1. Download the R package and decompress:
 ```sh
-wget https://github.com/GMELab/AutoMitoC/blob/master/AutoMitoC.V1.0a.tar.gz?raw=true
-tar -xvzf AutoMitoC.V1.0a.tar.gz
-cd AutoMitoC.V1.0a
+git clone https://github.com/GMELab/AutoMitoC
+cd AutoMitoC/scripts
 ```
 
 2. Install requisite R libraries:
