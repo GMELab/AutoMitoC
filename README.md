@@ -42,9 +42,9 @@ plink --bfile your_study \
 --out your_study_qc
 ```
 
-*Note that we have seen good performance at an even lower max-maf thresholds (e.g. --max-maf 0.001) but this is also dependent on your sample size. 
+*Note that we have seen comparable performance at even lower max-maf thresholds (e.g. --max-maf 0.001 with ~ 10000 autosomal probes) but this is also dependent on your sample size. 
 
-2. Follow step 1 of the PennCNV pipeline to generate [signal intensity files containing LRR and BAF values](http://penncnv.openbioinformatics.org/en/latest/user-guide/affy/#step-1-generate-the-signal-intensity-data-based-on-raw-cel-files).
+2. Follow step 1 of the PennCNV pipeline to generate [signal intensity files containing L2R and BAF values](http://penncnv.openbioinformatics.org/en/latest/user-guide/affy/#step-1-generate-the-signal-intensity-data-based-on-raw-cel-files).
 
 3. Correct MT and autosomal signal intensities for GC-waves using the PennCNV implementation of the [Diskin _et al_ (2008) adjustment](https://github.com/WGLab/PennCNV/blob/master/genomic_wave.pl). 
 
@@ -108,7 +108,8 @@ null device
 [1] "Step 2. Probe Cross-hybridization Check ... "
 [1] "Removing 950 Autosomal probes with potential cross-hybridization to the sex (R > 0.05) or mitochondrial (R > 0.05) genomes "
 [1] "Removing 3 Mitochondrial probes with potential cross-hybridization to the sex (R > 0.20) or autosomal (R > 0.05) genomes "
-[1] "*** Note that due to the robust epidemiological association between mtDNA-CN and sex, there is an expectation that mitochondrial probes will be associated with sex and therefore the correlation coefficient threshold for removing mitochondrial probes with evidence of cross-hybridization to sex chromosomes is more stringent"
+[1] "*** Note that due to the robust epidemiological association between mtDNA-CN and sex, there is an expectation that mitochondrial probes will be associated with sex
+and therefore the correlation coefficient threshold for removing mitochondrial probes with evidence of cross-hybridization to sex chromosomes is more stringent"
 [1] "Step 3. Final PCA of Clean Autosomal Probe Intensities ..."
 [1] "The Top 128 Autosomal Principal Components Explain ~70% variance in Probe Intensities and will be corrected for "
 null device
