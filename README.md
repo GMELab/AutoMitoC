@@ -46,7 +46,7 @@ plink --bfile your_study \
 
 2. Follow step 1 of the PennCNV pipeline to generate [signal intensity files containing L2R and BAF values](http://penncnv.openbioinformatics.org/en/latest/user-guide/affy/#step-1-generate-the-signal-intensity-data-based-on-raw-cel-files).
 
-3. Correct MT and autosomal signal intensities for GC-waves using the PennCNV implementation of the [Diskin _et al_ (2008) adjustment](https://github.com/WGLab/PennCNV/blob/master/genomic_wave.pl). 
+3. Correct signal intensities (MT and Auto L2R) for GC-waves using the PennCNV implementation of the [Diskin _et al_ (2008) adjustment](https://github.com/WGLab/PennCNV/blob/master/genomic_wave.pl). 
 
 4. Remove "wavy" samples with a post GC-corrected autosomal L2R standard deviation of > 0.35. 
 
