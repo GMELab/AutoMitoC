@@ -1,5 +1,5 @@
 # <p align="center"> ![image](https://github.com/GMELab/AutoMitoC/blob/main/AutoMitoC_LOGO_2021_11_26_SMALL.png) </p>
-# <p align="center"> Automatic Mitochondrial DNA Copy Number (AutoMitoC) Pipeline to infer mtDNA-CN from SNP array intensities </p>
+# <p align="center"> Automatic Mitochondrial DNA Copy Number (AutoMitoC) Pipeline to infer mtDNA-CN from genotyping arrays </p>
 
 ## Table of Contents
 
