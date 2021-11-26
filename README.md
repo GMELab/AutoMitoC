@@ -9,7 +9,7 @@ Automatic Mitochondrial DNA Copy Number (AutoMitoC) Pipeline to infer mtDNA-CN f
  - [Pre-Processing](#pre-processing)
  - [Necessary Input Files](#necessary-input-files)
  - [Quick Start](#quick-start)
- - [Caveats and Areas of Future Development](#caveats-and-areas-of-future-development)
+ - [Areas of Future Development](#areas-of-future-development)
  - [Contact information](#contact-information)
  - [Citation](#citation)
 
@@ -114,13 +114,13 @@ null device
 [1] "Script Duration: 0 hrs, 0 mins, 16 secs ..."
 
 ```
-## Caveats and Areas of Future Development
+## Areas of Future Development
 
 AutoMitoC remains under active development and we plan to make improvements in the following areas in the near future:
 
 1. The adjustment for autosomal principal components selects _k_ top PCs accounting for 70% of the variance in autosomal signal intensities, which approximated the inflection point on the scree plot and  worked well for us in practice on two independent datasets and different arrays; however, in the future, we plan to make this threshold less arbitrary and empirically determine the _k_ PCs corresponding to the inflection point. 
-2. AutoMitoC has been benchmarked using multiple Affymetrix arrays and we plan to soon test using Illumina arrays. 
-3. In the future, we will allow for greater flexibility to enable benchmarking of AutoMitoC estimates to other phenotypic correlates of mtDNA-CN (e.g. blood cell composition)
+2. AutoMitoC has been benchmarked using multiple Affymetrix arrays and we plan to also test using Illumina arrays. 
+3. We will allow for greater flexibility to enable benchmarking of AutoMitoC estimates to other phenotypic correlates of mtDNA-CN (e.g. blood cell composition)
 
 ## Contact information
 Any queries pertaining to the AutoMitoC scripts can be addressed to:
