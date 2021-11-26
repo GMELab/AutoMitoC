@@ -1,5 +1,5 @@
-# AutoMitoC
-Automatic Mitochondrial DNA Copy Number (AutoMitoC) Pipeline to infer mtDNA-CN from SNP array intensities 
+# <p align="center"> ![image](https://github.com/GMELab/AutoMitoC/blob/main/AutoMitoC_LOGO_2021_11_26_SMALL.png) </p>
+# <p align="center"> Automatic Mitochondrial DNA Copy Number (AutoMitoC) Pipeline to infer mtDNA-CN from SNP array intensities </p>
 
 ## Table of Contents
 
@@ -7,7 +7,7 @@ Automatic Mitochondrial DNA Copy Number (AutoMitoC) Pipeline to infer mtDNA-CN f
  - [Key Features](#key-features)
  - [Method Overview](#method-overview)
  - [Pre-Processing](#pre-processing)
- - [Necessary Input Files](#necessary-input-files)
+ - [Necessary Inputs](#necessary-inputs)
  - [Quick Start](#quick-start)
  - [Areas of Future Development](#areas-of-future-development)
  - [Contact information](#contact-information)
@@ -50,7 +50,7 @@ plink --bfile your_study \
 
 4. Remove "wavy" samples with a post GC-corrected autosomal L2R standard deviation of > 0.35. 
 
-## Necessary Input Files
+## Necessary Inputs
 
 The core AutoMitoC Rscript assumes all [pre-processing](#pre-processing) steps have been completed and requires the following inputs to be specified:
 
@@ -127,6 +127,7 @@ Any queries pertaining to the AutoMitoC scripts can be addressed to:
 **Michael Chong (michael.chong@phri.ca)** and **Guillaume Paré (pareg@mcmaster.ca)**
 
 ## Citation 
-
+### Logo 
+Created with [BioRender.com](https://biorender.com/)
 ### Preprint
 [Chong M, Mohammadi-Shemirani P, Perrot N, Nelson W, Morton R, Narula S, Lali R, Khan I, Khan M, Judge C, Machipisa T, Cawte N, O'Donnell M, Pigeyre M, Akhabir L, Paré G. GWAS and ExWAS of blood Mitochondrial DNA copy number identifies 71 loci and highlights a potential causal role in dementia. _medRxiv_ (2021) doi:10.1101/2021.04.08.21255031.](https://www.medrxiv.org/content/10.1101/2021.04.08.21255031v1)
