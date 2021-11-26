@@ -26,7 +26,7 @@ AutoMitoC builds off of the [MitoPipeline (Lane _et al_, 2014)](http://genvisis.
 * Cross-hybridizing probes are identified by empirically assessing evidence for cross-hybridization
 * The primary estimate of mitochondrial (MT) signal is ascertained using principal component analysis (PCA)
  
-For further details on how AutoMitoC was developed or the rationale behind these features, please see the main manuscript (link).
+For further details on how AutoMitoC was developed or the rationale behind these features, please see the [main manuscript](https://www.medrxiv.org/content/10.1101/2021.04.08.21255031v1).
 
 ## Method Overview
 
