@@ -9,28 +9,57 @@ Mitochondria have their own unique DNA due to their origins as ancient bacteria.
 
 AutoMitoC builds off of the MitoPipeline (Lane _et al_, 2014) with three key distinguishing features: 
 
-1. Autosomal signal normalization utilises globally rare variants in place of common variants which confers advantages in terms of both speed and portability to ethnically diverse studies
-2. Cross-hybridizing probes are identified by empirically assessing evidence for cross-hybridization via association of signal intensities
-3. (iii) The primary estimate of mitochondrial (MT) signal is ascertained using principal component analysis (PCA) as opposed to using the median signal intensity of MT probes. For further details on how AutoMitoC was developed or the rationale behind these features, please see the main manuscript (link).
+* Nuclear signal is approximated by globally rare variants in place of common variants 
+* Cross-hybridizing probes are identified by empirically assessing evidence for cross-hybridization
+* The primary estimate of mitochondrial (MT) signal is ascertained using principal component analysis (PCA)
+ 
+For further details on how AutoMitoC was developed or the rationale behind these features, please see the main manuscript (link).
 
 ## Method Overview
 
 ![image](https://user-images.githubusercontent.com/30928727/143525953-4f39541d-53e0-4f3e-a5bf-4850ad2f1b10.png)
 
-## Required Inputs ##
+## Necessary Input Files
 
-## ## 
+The AutoMitoC pipeline requires the following inputs.
+
+1. MT L2R matrix (comma separated; rows as samples; columns as mitochondrial probes; no header or sample IDs)
+2. Autosomal L2R matrix (comma separated; rows as samples; columns as mitochondrial probes; no header or sample IDs)
+3. A sample descriptor file (comma separated; rows as samples; header line) containing:
+i) sample IDs #in the order that they appear in the MT and Autosomal L2R matrices
+ii) self-reported gender
+iii) age in years
+iv) (optional) secondary mtDNA-CN measurement (e.g. qPCR, WGS, digital PCR)
+
+For file formatting examples, please download the toy dataset in the subsequent "Quick Start" section. 
 
 
-## Dependencies ## 
 
-##  ##
 
-## Example with toy dataset ## 
 
-## Caveats ##
+Currently, the AutoMitoC pipeline starts at the second major step after pre-processing. Pre-processing can be done using previously developed tools.
 
-AutoMitoC remains under active development and we encourage users to provide feedback to continually improve the method. That being said, we plan to make improvements in the following areas in the near future:
+For Affymetrix data, L2R values can be derived by XXX
 
-1. The adjustment for autosomal principal components selects _k_ top PCs accounting for 70% of the variance in autosomal signal intensities, which approximated the inflection point on the scree plot and also worked well for us in practice on two independent datasets and two different arrays; however, in the future, we plan to make this threshold less arbitrary and empirically determine the _k_ PCs corresponding to the inflection point. 
-2. AutoMitoC has been benchmarked using multiple Affymetrix arrays and we plan to validate using Illumina arrays next. 
+Filtering for rare autosomal variants can be done as follows. 
+
+Filtering for common autosomal variants can be done as follows. 
+
+## Quick Start
+
+1. Download the toy dataset  
+2. Install requisite R libraries
+
+    install.packages("data.table")
+    install.packages("ggplot2")
+    install.packages("parallel")
+
+3. Run the R script as follows
+
+## Caveats and Areas of Future Development
+
+AutoMitoC remains under active development and we encourage users to provide feedback to michael.chong@phri.ca for suggestions. We plan to make improvements in the following areas in the near future:
+
+1. The adjustment for autosomal principal components selects _k_ top PCs accounting for 70% of the variance in autosomal signal intensities, which approximated the inflection point on the scree plot and  worked well for us in practice on two independent datasets and different arrays; however, in the future, we plan to make this threshold less arbitrary and empirically determine the _k_ PCs corresponding to the inflection point. 
+2. AutoMitoC has been benchmarked using multiple Affymetrix arrays and we plan to soon test using Illumina arrays. 
+3. In the future, we will allow for greater flexibility to enable benchmarking of AutoMitoC estimates to other phenotypic correlates of mtDNA-CN (e.g. blood cell composition)
