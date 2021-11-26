@@ -50,7 +50,7 @@ Filtering for common autosomal variants can be done as follows.
 1. Download the toy dataset  
 2. Install requisite R libraries
 
-    install.packages("data.table")
+install.packages("data.table")
     install.packages("ggplot2")
     install.packages("parallel")
 
