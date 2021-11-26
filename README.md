@@ -31,7 +31,7 @@ For further details on how AutoMitoC was developed or the rationale behind these
 
 ## Method Overview
 
-![image](https://user-images.githubusercontent.com/30928727/143525953-4f39541d-53e0-4f3e-a5bf-4850ad2f1b10.png)
+![AutoMitoC_CHART_2021_11_26_FINAL](https://user-images.githubusercontent.com/30928727/143615288-fd36ea55-23b5-4ead-85dc-3e9c5dc2c1cd.jpeg)
 
 ## Pre-processing
 
