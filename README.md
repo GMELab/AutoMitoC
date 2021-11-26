@@ -33,6 +33,8 @@ For further details on how AutoMitoC was developed or the rationale behind these
 
 ![AutoMitoC_CHART_2021_11_26_FINAL](https://user-images.githubusercontent.com/30928727/143615288-fd36ea55-23b5-4ead-85dc-3e9c5dc2c1cd.jpeg)
 
+This figure was created using [**lucid charts**](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=aud-921551091782:kwd-64262996435&km_CPC_Country=9000910&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&mkwid=stwZuDiXw_pcrid_442433236001_pkw_lucid%20charts_pmt_e_pdv_c_slid__pgrid_55688909257_ptaid_aud-921551091782:kwd-64262996435_&gclid=CjwKCAiAqIKNBhAIEiwAu_ZLDgo5PDn3MCLTVBtuG_3E53Epo4dl48Wgh9LAfXd2qfiKrLjN31UBQhoCHEkQAvD_BwE)
+
 ## Pre-processing
 
 1. We recommend applying some basic PLINK QC for autosomal variants:
