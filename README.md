@@ -31,6 +31,22 @@ For further details on how AutoMitoC was developed or the rationale behind these
 
 ![image](https://user-images.githubusercontent.com/30928727/143525953-4f39541d-53e0-4f3e-a5bf-4850ad2f1b10.png)
 
+## Pre-processing
+
+1. We recommend applying some basic PLINK QC for autosomal variants:
+```sh
+plink --bfile your_study \
+--max-maf 0.01 \
+--geno 0.05 \
+--out your_study_qc
+```
+
+*Note that we have seen good performance at an even lower max-maf thresholds (e.g. --max-maf 0.001) but this is also dependent on your sample size. 
+
+2. Generate normalized L2R values. For affymetrix data, I
+3. Correct MT and autosomal signal intensities for GC-waves. In the main manuscript, we used the PennCNV implementation of the [Diskin _et al_ (2008) adjustment for GC-waves](https://github.com/WGLab/PennCNV/blob/master/genomic_wave.pl). 
+4.  
+
 ## Necessary Input Files
 
 The AutoMitoC pipeline Rscript requires the following inputs to be specified:
@@ -42,8 +58,8 @@ The AutoMitoC pipeline Rscript requires the following inputs to be specified:
    ii) self-reported gender
    iii) age in years
    iv) (optional) secondary mtDNA-CN measurement for comparison (e.g. qPCR, WGS, digital PCR)
-4. Number of cores to parallelize the PCA steps
-5. Output Path / Output File Name Prefix
+4. **Number of cores** to parallelize the PCA steps
+5. Output Path / **Output File Name Prefix**
 
 For file formatting examples, please download the toy dataset in the subsequent "Quick Start" section. 
 
