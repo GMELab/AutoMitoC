@@ -138,12 +138,4 @@ Created with [BioRender.com](https://biorender.com/)
 [Chong M, Mohammadi-Shemirani P, Perrot N, Nelson W, Morton R, Narula S, Lali R, Khan I, Khan M, Judge C, Machipisa T, Cawte N, O'Donnell M, Pigeyre M, Akhabir L, Paré G. GWAS and ExWAS of blood Mitochondrial DNA copy number identifies 71 loci and highlights a potential causal role in dementia. _eLife_ (2022) doi:10.7554/eLife.70382](https://elifesciences.org/articles/70382)
 
 ## Data Availability 
-We applied AutoMitoC to the UK Biobank and performed GWAS for buffy coat mtDNA-CN including up to 395,781 participants. Full genome-wide summary statistics (even the sub-bonferroni associations!) are available for download from the GWAS catalogue:
-
-[Trans-ethnic meta-analysis (GCST90026371)](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90026001-GCST90027000/GCST90026371/)
-
-[European (GCST90026372)](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90026001-GCST90027000/GCST90026372/)
-
-[South Asian (GCST90026373)](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90026001-GCST90027000/GCST90026373/)
-
-[African (GCST90026374)](http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90026001-GCST90027000/GCST90026374/)
+We applied AutoMitoC to the UK Biobank and performed GWAS for buffy coat mtDNA-CN including up to 395,781 participants. Full genome-wide summary statistics (even the sub-bonferroni associations!) are available for download from the [GWAS catalogue](https://www.ebi.ac.uk/gwas/publications/35023831)
